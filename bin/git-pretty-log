@@ -1,0 +1,5 @@
+#!/bin/sh
+
+dir=${1-.}
+cd $dir \
+	&& git log --pretty=format:'=================================== \n h1. %Cred%h%Creset - %C(yellow)%d%Creset - Author => %C(bold blue)<%an>%Creset \n Message => %s %Cgreen(%cr) \n===================================' --decorate --all --topo-order --graph
