@@ -36,6 +36,8 @@ Brew (buggy):
  - git update-extras
  - git setup
  - git touch
+ - git backup
+ - git pretty log
 
 ## git-contrib
 
@@ -267,3 +269,11 @@ Set up a git repository if one doesn't exist, add all files and make an initial 
 ## git-touch [filename]
 
 Call `touch` on the given file and add it to the current index. Used one-step creating new files.
+
+## git-backup [remote]
+
+backup all branches and tags with one command in to remote _remote_ parameters
+
+## git-pretty-log
+
+print a pretty log version as graph. _ATTENTION_ require's git version _1.7.1_

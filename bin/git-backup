@@ -1,7 +1,8 @@
 #!/bin/sh
 
-dir=${1-.}
-cd $dir \
-	&& git add $dir
-	&& git commit -am 'Backup ' date
-	&& git push --all
+test -z $1 && echo "remote required" && exit 1
+
+remote=${1-origin}
+&& git add .
+&& git commit -am 'Backup ' date
+&& git push $remote --all
